@@ -32,4 +32,6 @@ __custom_prompt () {
   echo "\n${ruby_prompt}%{$reset_color%}%{$fg_bold[cyan]%}${cwd} ${branch}%{$reset_color%}\n\$ "
 }
 
-PROMPT='$(__custom_prompt)'
+setopt promptsubst
+
+PS1='$(__custom_prompt)'
