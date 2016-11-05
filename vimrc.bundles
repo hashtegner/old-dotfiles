@@ -8,19 +8,15 @@ call vundle#begin()
 
 Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
-
-" Tools
 Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
-
-" Ruby
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
-
-" Syntax
 Plugin 'vim-ruby/vim-ruby'
-
-
+Plugin 'msanders/snipmate.vim'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
