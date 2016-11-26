@@ -34,8 +34,6 @@
   autocrlf = input
 [help]
   autocorrect = 1
-[merge]
-  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
