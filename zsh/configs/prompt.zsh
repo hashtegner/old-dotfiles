@@ -27,7 +27,7 @@ __custom_prompt () {
   fi
 
 
-  ruby_prompt="%{$fg_bold[green]%}[${USER}|${rails_prompt}${ruby_version}]%{$reset_color%} "
+  ruby_prompt="%{$fg_bold[red]%}[${USER}|${rails_prompt}${ruby_version}]%{$reset_color%} "
 
   echo "\n${ruby_prompt}%{$reset_color%}%{$fg_bold[cyan]%}${cwd} ${branch}%{$reset_color%}\n\$ "
 }
