@@ -11,7 +11,7 @@ __custom_prompt () {
   if [[ "$branch" = "" ]]; then
     branch=" "
   else
-    branch=" %{$fg[white]%}$branch "
+    branch=" %{$fg[black]%}$branch "
   fi
 
   ruby_version=`ruby -e "puts RUBY_VERSION"`
@@ -20,16 +20,13 @@ __custom_prompt () {
     rails_version=`cat Gemfile.lock | grep -E " +rails \([0-9]+" | sed 's/ *rails (\(.*\))/\1/'`
   fi
 
-  ruby_prompt=""
-
   if [[ "$rails_version" != "" ]]; then
     rails_prompt="${rails_version}@"
   fi
 
+  ruby_prompt="%{$fg[black]%}${rails_prompt}${ruby_version}%{$reset_color%}"
 
-  ruby_prompt="%{$fg[green]%}${rails_prompt}${ruby_version}%{$reset_color%}"
-
-  echo "\n%{$fg[blue]%}${cwd}${branch}%{$reset_color%}${ruby_prompt}\n➜ "
+  echo "\n%{$fg_bold[black]%}${cwd}${reset_color}${branch}%{$reset_color%}${ruby_prompt}\n➜ "
 }
 
 setopt promptsubst
