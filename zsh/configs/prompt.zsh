@@ -11,7 +11,7 @@ __custom_prompt () {
   if [[ "$branch" = "" ]]; then
     branch=" "
   else
-    branch=" %{$fg[black]%}$branch "
+    branch=" %{$fg[red]%}$branch "
   fi
 
   ruby_version=`ruby -e "puts RUBY_VERSION"`
@@ -24,9 +24,9 @@ __custom_prompt () {
     rails_prompt="${rails_version}@"
   fi
 
-  ruby_prompt="%{$fg[black]%}${rails_prompt}${ruby_version}%{$reset_color%}"
+  ruby_prompt="%{$fg[yellow]%}${rails_prompt}${ruby_version}%{$reset_color%}"
 
-  echo "\n%{$fg_bold[black]%}${cwd}${reset_color}${branch}%{$reset_color%}${ruby_prompt}\n➜ "
+  echo "\n%{$fg_bold[gray]%}${cwd}${reset_color}${branch}%{$reset_color%}${ruby_prompt}\n➜ "
 }
 
 setopt promptsubst
