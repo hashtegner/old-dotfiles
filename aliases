@@ -3,6 +3,7 @@ alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias gatom="$GOPATH=$PWD:$PWD/vendor atom"
 
 # Bundler
 alias b="bundle"
